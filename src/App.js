@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppBar
+        title={'My title'}
+        subtitle={'My subtitle'}
+        author={'Daniela Liendo'}
+      />
     </div>
   );
+}
+
+export const AppBar = ({ title, subtitle, author }) => {
+  return (
+    <>
+      <h1>{title}</h1>
+      <h2>{subtitle}</h2>
+      <hr />
+      <h2>Author: {author}</h2>
+    </>
+  )
 }
 
 export default App;
